@@ -58,6 +58,23 @@ header li:last-child {
 	transform: scale(1.05);
 	transition:0.7s ease-in-out;
 }
+
+.hover-link::after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #fff;
+	transition: width .4s;
+}
+
+.hover-link:hover::after {
+	width: 100%;
+	transition: width .4s;
+}
+
+
+
  /****************** main ****************** */
 
 ul {
@@ -88,7 +105,7 @@ padding: 0px;
 	position: relative;
 	border-right:none;
 	background-color: #666;
-	width: 200px;
+	width: 160px;
 }
 .menuderoulant {
 	width: 400px;
@@ -105,9 +122,11 @@ padding: 0px;
     display: block ;
     position: absolute;
     top: 10px; 
-    left: 90px; 
+    left: 80px; 
     z-index: 100;
-	background-color: #000; 
+	background-color: #000;
+	border: 1px solid black;
+
 }
 
 .menuderoulant li a {
@@ -116,6 +135,7 @@ padding: 0px;
 
 .menuderoulant ul li:hover a {   
 		color: #f00; 
+		border: 1px solid black;
 }
 
 .box-one {
@@ -164,21 +184,6 @@ padding: 0px;
 h2 {
 	font-size: 2em;
 }
-
-.hover-link::after {
-	content: '';
-	display: block;
-	width: 0;
-	height: 2px;
-	background: #fff;
-	transition: width .4s;
-}
-
-.hover-link:hover::after {
-	width: 100%;
-	transition: width .4s;
-}
-
 
  /********************* footer ************** */
 
